@@ -5,5 +5,13 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="StolyarovaDemo1703.MainWindow"
         Title="StolyarovaDemo1703">
-    Welcome to Avalonia!
+    <StackPanel Orientation="Vertical"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center" Spacing="10">
+        <TextBlock Text="Авторизация" HorizontalAlignment="Center"/>
+        <TextBox Name="LoginBox" Watermark="Логин" Width="200"/>
+        <TextBox Name="PasswordBox" Watermark="Пароль" PasswordChar="*"/>
+        <Button Content="Войти" Click="Button_Click" HorizontalAlignment="Center"/>
+        <Button Content="Войти как гость" Click="Button_Click_1" HorizontalAlignment="Center"/>
+    </StackPanel>
 </Window>

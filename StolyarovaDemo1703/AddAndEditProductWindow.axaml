@@ -1,0 +1,34 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:asyncImageLoader="clr-namespace:AsyncImageLoader;assembly=AsyncImageLoader.Avalonia"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="StolyarovaDemo1703.AddAndEditProductWindow"
+        Title="AddAndEditProductWindow">
+  <StackPanel Spacing="10" Margin="15" Width="270">
+		  <ComboBox Name="productNameCombo"
+                    PlaceholderText="Наименование"/>
+          <ComboBox Name="CategoryCombo"
+                    PlaceholderText="Категория"/>
+          <TextBox Watermark="Описание"
+                   Height="100" TextWrapping="WrapWithOverflow"
+                   Name="DescriptionBox"/>
+          <ComboBox Name="ManufacturerCombo"
+                    PlaceholderText="Производитель"/>
+          <ComboBox Name="ProviderCombo"
+                    PlaceholderText="Поставщик"/>
+          <TextBox Name="PriceBox"
+                   Watermark="Цена"/>
+          <ComboBox Name="UnitCombo"
+                    PlaceholderText="Единица измерения"/>
+          <TextBox Name="CountBox"
+                   Watermark="Количество на складе"/>
+          <TextBox Name="ActiveDiscountBox"
+                   Watermark="Действующая скидка"/>
+          <Button Content="Добавить фотографию" Click="Button_Click"/>
+          <asyncImageLoader:AdvancedImage Name="Prewatch" Height="100"/>
+          <Button Content="Сохранить" Click="Button_ClickSave"/>
+
+      </StackPanel>
+</Window>
